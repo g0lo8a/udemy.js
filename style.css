@@ -1,0 +1,19 @@
+html {
+  background: rgb(70, 68, 68);
+}
+
+body {
+  color: #ebebeb;
+}
+
+a {
+  color:#fff;
+}
+
+img {
+  width: 150px;
+}
+
+button {
+  margin-left: 10px;
+}
