@@ -1129,7 +1129,7 @@ const ul = document.querySelector('ul')
 console.log(ul.previousElementSibling)
 console.log(ul.nextElementSibling)
 
-console.log('=======часть 1========')
+console.log('=======часть 1========');
 /**
  * 1. Найти параграф и получить его текстовое содержимое (только текст!)
  * 2. Создать функцию, которая принимает в качестве аргумента узел DOM и возвращает информацию (в виде объекта) о типе узла,
@@ -1138,7 +1138,6 @@ console.log('=======часть 1========')
  *  getTextFromUl(ul) ---> ["Link1", "Link2", "Link3"]
  * 4. В параграфе заменить все дочерние текстовые узлы на “-text-” (вложенные теги должны остаться). Конечный результат:
  *  -text-<a href="#">reprehendunt</a>-text-<mark>nemore</mark>-text-
-
  */
 
 function $(params) {
@@ -1164,9 +1163,17 @@ function node(node) {
 console.log(node(firstP))
 
 function getTextFromUl(ul) {
-  $(ul)
+  if (!(ul instanceof Element)) return
+
+  const [...link] = ul.querySelectorAll('a') || []
+  return link.map((a) => a.textContent)
 }
-console.log('=======часть 1========')
+
+const ulList = $('ul')
+console.log(getTextFromUl(ulList))
+
+
+console.log('=======часть 1========');
 
 /**
  * 
