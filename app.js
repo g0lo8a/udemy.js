@@ -1128,7 +1128,13 @@ console.log(filteredLinks);
 const ul = document.querySelector('ul')
 console.log(ul.previousElementSibling)
 console.log(ul.nextElementSibling)
+function $(params) {
+  return document.querySelector(params)
+}
 
+function $$(params) {
+  return document.createElement(params)
+}
 console.log('=======часть 1========');
 /**
  * 1. Найти параграф и получить его текстовое содержимое (только текст!)
@@ -1140,15 +1146,7 @@ console.log('=======часть 1========');
  *  -text-<a href="#">reprehendunt</a>-text-<mark>nemore</mark>-text-
  */
 
-function $(params) {
-  return document.querySelector(params)
-}
-
-function $$(params) {
-  return document.createElement(params)
-}
-
-const firstP = $('.first')
+const firstP = document.querySelector('.first')
 console.log(firstP.textContent)
 
 function node(node) {
@@ -1160,6 +1158,7 @@ function node(node) {
     childNodes: node.childNodes.length
   }
 }
+
 console.log(node(firstP))
 
 function getTextFromUl(ul) {
@@ -1169,9 +1168,12 @@ function getTextFromUl(ul) {
   return link.map((a) => a.textContent)
 }
 
-const ulList = $('ul')
+const ulList = document.querySelector('ul')
 console.log(getTextFromUl(ulList))
 
+firstP.childNodes.forEach((t) => (
+  console.log((t.nodeType === 3) ? t.data = '-text-' : false)
+))
 
 console.log('=======часть 1========');
 
