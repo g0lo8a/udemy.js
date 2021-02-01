@@ -58,7 +58,7 @@ console.log(string);
  */
 
 const obj = {
-  product: "iphone",
+    product: "iphone",
 };
 obj.price = 1000;
 obj.currency = "dollar";
@@ -148,69 +148,69 @@ console.log(al);
 
 let variable;
 if (variable === "hidden") {
-  variable = "visible";
+    variable = "visible";
 } else {
-  variable = "hidden";
+    variable = "hidden";
 }
 
 variable = 2;
 
 if (variable === 0) {
-  variable = 1;
+    variable = 1;
 } else if (variable < 0) {
-  variable = "less then zero";
+    variable = "less then zero";
 } else if (variable > 0) {
-  variable *= 10;
+    variable *= 10;
 }
 console.log(variable);
 
 const car = {
-  name: "Lexus",
-  age: 10,
-  create: 2008,
-  needRepair: false,
+    name: "Lexus",
+    age: 10,
+    create: 2008,
+    needRepair: false,
 };
 
 if (car.age > 5) {
-  console.log("Need Repair");
-  car.needRepair = true;
+    console.log("Need Repair");
+    car.needRepair = true;
 } else {
-  car.needRepair = false;
+    car.needRepair = false;
 }
 
 const item = {
-  name: "Intel core i7",
-  price: "100$",
-  discount: "15%",
+    name: "Intel core i7",
+    price: "100$",
+    discount: "15%",
 };
 
 if (
-  item.hasOwnProperty("discount") &&
-  item.hasOwnProperty("price") &&
-  !isNaN(parseInt(item.discount)) &&
-  !isNaN(parseInt(item.price))
+    item.hasOwnProperty("discount") &&
+    item.hasOwnProperty("price") &&
+    !isNaN(parseInt(item.discount)) &&
+    !isNaN(parseInt(item.price))
 ) {
-  item.priceWithDiscount =
-    parseInt(item.price) -
-    (parseInt(item.price) / 100) * parseInt(item.discount);
+    item.priceWithDiscount =
+        parseInt(item.price) -
+        (parseInt(item.price) / 100) * parseInt(item.discount);
 } else if (item.hasOwnProperty("discount")) {
-  console.log(item.price);
+    console.log(item.price);
 }
 
 console.log(item);
 
 let product = {
-  name: "Яблоко",
-  price: "10$",
+    name: "Яблоко",
+    price: "10$",
 };
 
 let min = 10; // минимальная цена
 let max = 20; // максимальная цена
 
 if (parseInt(product.price) >= min && parseInt(product.price) <= max) {
-  console.log(product.name);
+    console.log(product.name);
 } else {
-  console.log("Товаров не найдено!");
+    console.log("Товаров не найдено!");
 }
 
 /**
@@ -240,13 +240,13 @@ if (parseInt(product.price) >= min && parseInt(product.price) <= max) {
 const aba = "inline";
 
 switch (aba) {
-  case "block":
-  case "none":
-  case "inline":
-    console.log(aba);
-    break;
-  default:
-    console.log("other");
+    case "block":
+    case "none":
+    case "inline":
+        console.log(aba);
+        break;
+    default:
+        console.log("other");
 }
 
 let x = "visible";
@@ -288,58 +288,58 @@ let strstr = "i am in the easycode";
 let res = "";
 
 for (let i = 0; i < strstr.length; i++) {
-  if (strstr[i - 1] === " " || i === 0) {
-    res += strstr[i].toUpperCase();
-  } else {
-    res += strstr[i];
-  }
+    if (strstr[i - 1] === " " || i === 0) {
+        res += strstr[i].toUpperCase();
+    } else {
+        res += strstr[i];
+    }
 }
 console.log(res);
 
 let stringa = "tseb eht ma i";
 res = "";
 for (let i = 0; i < stringa.length; i++) {
-  res += stringa[stringa.length - i - 1];
+    res += stringa[stringa.length - i - 1];
 }
 console.log(res);
 
 res = 1;
 for (let i = 0; i < 10; i++) {
-  res *= 10 - i;
+    res *= 10 - i;
 }
 console.log(res);
 
 let newStr = "JavaScript is a pretty good language";
 res = "";
 for (let i = 0; i < newStr.length; i++) {
-  if (newStr[i] === " ") {
-    continue;
-  }
-  if (newStr[i - 1] === " " || i === 0) {
-    res += newStr[i].toUpperCase();
-  } else {
-    res += newStr[i];
-  }
+    if (newStr[i] === " ") {
+        continue;
+    }
+    if (newStr[i - 1] === " " || i === 0) {
+        res += newStr[i].toUpperCase();
+    } else {
+        res += newStr[i];
+    }
 }
 console.log(res);
 
 const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
 for (const i of arr) {
-  if (i & (2 !== 0)) {
-    console.log(i);
-  }
+    if (i & (2 !== 0)) {
+        console.log(i);
+    }
 }
 
 let list = {
-  name: "denis",
-  work: "easycode",
-  age: 29,
+    name: "denis",
+    work: "easycode",
+    age: 29,
 };
 
 for (const key in list) {
-  if (typeof list[key] === "string") {
-    list[key] = list[key].toUpperCase();
-  }
+    if (typeof list[key] === "string") {
+        list[key] = list[key].toUpperCase();
+    }
 }
 console.log(list);
 
@@ -373,23 +373,23 @@ console.log(list);
  */
 
 function multiply() {
-  let res = 1;
-  for (let i = 0; i < arguments.length; i++) {
-    res *= arguments[i];
-  }
-  return arguments.length ? res : 0;
+    let res = 1;
+    for (let i = 0; i < arguments.length; i++) {
+        res *= arguments[i];
+    }
+    return arguments.length ? res : 0;
 }
 
 console.log(multiply(1, 2, 3));
 console.log(multiply());
 
 function reverseString(str) {
-  let sting = String(str);
-  res = "";
-  for (let i = 0; i < sting.length; i++) {
-    res += sting[sting.length - i - 1];
-  }
-  return res;
+    let sting = String(str);
+    res = "";
+    for (let i = 0; i < sting.length; i++) {
+        res += sting[sting.length - i - 1];
+    }
+    return res;
 }
 
 console.log(reverseString("tseb eht ma i"));
@@ -399,30 +399,30 @@ console.log(reverseString(undefined));
 console.log(reverseString());
 
 function getCodeStringFromText(str) {
-  let res = "";
-  str = String(str);
-  for (let i = 0; i < str.length; i++) {
-    res += str[i].charCodeAt() + " ";
-  }
-  return res.trim();
+    let res = "";
+    str = String(str);
+    for (let i = 0; i < str.length; i++) {
+        res += str[i].charCodeAt() + " ";
+    }
+    return res.trim();
 }
 
 console.log(getCodeStringFromText("hello"));
 console.log(getCodeStringFromText(null));
 
 function guessTheNumber(num) {
-  let randomNumber = +(Math.random() * 10).toFixed(0);
-  num = parseInt(num);
-  console.log(num);
-  if (isNaN(num)) {
-    return new Error("Please provide a valid number");
-  } else if (num && num > 0 && num <= 10) {
-    return num === randomNumber
-      ? "Вы выиграли"
-      : `Вы не угадали ваше число ${num} а выпало число ${randomNumber}`;
-  } else {
-    return new Error("Please provide number in range 0 - 10");
-  }
+    let randomNumber = +(Math.random() * 10).toFixed(0);
+    num = parseInt(num);
+    console.log(num);
+    if (isNaN(num)) {
+        return new Error("Please provide a valid number");
+    } else if (num && num > 0 && num <= 10) {
+        return num === randomNumber ?
+            "Вы выиграли" :
+            `Вы не угадали ваше число ${num} а выпало число ${randomNumber}`;
+    } else {
+        return new Error("Please provide number in range 0 - 10");
+    }
 }
 
 console.log(guessTheNumber(1));
@@ -431,74 +431,73 @@ console.log(guessTheNumber("1"));
 console.log(guessTheNumber(null));
 
 function getArray(n) {
-  let res = [];
-  for (let i = 0; i < n; i++) {
-    res[i] = i + 1;
-  }
-  return res;
+    let res = [];
+    for (let i = 0; i < n; i++) {
+        res[i] = i + 1;
+    }
+    return res;
 }
 
 console.log(getArray(10));
 
 function doubleArray(arr) {
-  return arr.concat(arr);
+    return arr.concat(arr);
 }
 
 console.log(doubleArray([1, 2, 3]));
 
 function changeCollection() {
-  let res = [];
-  for (let i = 0; i < arguments.length; i++) {
-    if (Array.isArray(arguments[i])) {
-      const element = arguments[i].slice();
-      element.shift();
-      res.push(element);
+    let res = [];
+    for (let i = 0; i < arguments.length; i++) {
+        if (Array.isArray(arguments[i])) {
+            const element = arguments[i].slice();
+            element.shift();
+            res.push(element);
+        }
     }
-  }
-  return res;
+    return res;
 }
 console.log(changeCollection([1, 2, 3], ["a", "b", "c"]));
 console.log(changeCollection([1, 2, 3]));
 
-const users = [
-  {
-    _id: "5e36b779dc76fe3db02adc32",
-    balance: "$1,955.65",
-    picture: "http://placehold.it/32x32",
-    age: 33,
-    name: "Berg Zimmerman",
-    gender: "male",
-  },
-  {
-    _id: "5e36b779d117774176f90e0b",
-    balance: "$3,776.14",
-    picture: "http://placehold.it/32x32",
-    age: 37,
-    name: "Deann Winters",
-    gender: "female",
-  },
-  {
-    _id: "5e36b779daf6e455ec54cf45",
-    balance: "$3,424.84",
-    picture: "http://placehold.it/32x32",
-    age: 36,
-    name: "Kari Waters",
-    gender: "female",
-  },
+const users = [{
+        _id: "5e36b779dc76fe3db02adc32",
+        balance: "$1,955.65",
+        picture: "http://placehold.it/32x32",
+        age: 33,
+        name: "Berg Zimmerman",
+        gender: "male",
+    },
+    {
+        _id: "5e36b779d117774176f90e0b",
+        balance: "$3,776.14",
+        picture: "http://placehold.it/32x32",
+        age: 37,
+        name: "Deann Winters",
+        gender: "female",
+    },
+    {
+        _id: "5e36b779daf6e455ec54cf45",
+        balance: "$3,424.84",
+        picture: "http://placehold.it/32x32",
+        age: 36,
+        name: "Kari Waters",
+        gender: "female",
+    },
 ];
 
 function filterUsers(arr, key, value) {
-  let res = [];
-  if (Array.isArray(arr) && key && value) {
-    for (let i = 0; i < arr.length; i++) {
-      if (arr[i][key] === value) {
-        res.push(arr[i]);
-      }
+    let res = [];
+    if (Array.isArray(arr) && key && value) {
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i][key] === value) {
+                res.push(arr[i]);
+            }
+        }
+    } else {
+        return new Error("Error message");
     }
-  } else {
-    return new Error("Error message");
-  }
-  return res;
+    return res;
 }
 
 console.log(filterUsers(users, "age", 36));
@@ -509,86 +508,86 @@ console.log(filterUsers(users, "gender", "female"));
  */
 
 function firstFunc(arr, fn) {
-  let res = 'New value: '
-  for (let i = 0; i < arr.length; i++) {
-    res += fn(arr[i])
-  }
-  return res
+    let res = 'New value: '
+    for (let i = 0; i < arr.length; i++) {
+        res += fn(arr[i])
+    }
+    return res
 }
 
 
 function handler1(el) {
-  return el[0].toUpperCase() + el.slice(1);
+    return el[0].toUpperCase() + el.slice(1);
 }
 
 console.log(firstFunc(['my', 'name', 'is', 'Trinity'], handler1));
 
 function handler2(el) {
-  return `${el * 10}, `
+    return `${el * 10}, `
 }
 
 console.log(firstFunc([10, 20, 30], handler2).trim())
 
 function handler3(el) {
-  return `${el.name} is ${el.age},`
+    return `${el.name} is ${el.age},`
 }
 
 console.log(firstFunc([{ age: 45, name: 'Jhon' }, { age: 20, name: 'Aaron' }], handler3));
 
 function handler4(el) {
-  return el.split('').reverse().join('')
+    return el.split('').reverse().join('')
 }
 
 console.log(firstFunc(['abs', '123'], handler4));
 
 function every(arr, fn) {
-  if (Array.isArray(arr) && typeof fn === 'function') {
-    for (let i = 0; i < arr.length; i++) {
-      if (!fn(arr[i], i, arr)) {
-        return false
-      }
+    if (Array.isArray(arr) && typeof fn === 'function') {
+        for (let i = 0; i < arr.length; i++) {
+            if (!fn(arr[i], i, arr)) {
+                return false
+            }
+        }
+    } else {
+        return new Error("Please provide a valid number")
     }
-  } else {
-    return new Error("Please provide a valid number")
-  }
-  return true
+    return true
 }
 
-console.log(every([6, 5, 7], function (el) { return el > 5 }))
+console.log(every([6, 5, 7], function(el) { return el > 5 }))
 
 /**
  * This
  */
 
 const rectangle = {
-  width: 100,
-  heght: 50,
-  getSquare: function () {
-    return this.width * this.heght
-  }
+    width: 100,
+    heght: 50,
+    getSquare: function() {
+        return this.width * this.heght
+    }
 }
 
 console.log(rectangle.getSquare())
 
 const price = {
-  price: 10,
-  discount: '15%',
-  getPrice: function () {
-    return this.price
-  },
-  getPriceWithDiscount: function () {
-    return this.price - (this.price / 100 * parseInt(this.discount))
-  }
+    price: 10,
+    discount: '15%',
+    getPrice: function() {
+        return this.price
+    },
+    getPriceWithDiscount: function() {
+        return this.price - (this.price / 100 * parseInt(this.discount))
+    }
 }
 
 console.log(price.getPrice())
 console.log(price.getPriceWithDiscount())
 
 const object = {
-  height: 10,
-  increment: function () {
-    return this.height += 1
-  }
+    height: 10,
+    increment: function() {
+        return this.height += 1
+    }
 }
 
 console.log(object.height)
@@ -596,56 +595,56 @@ object.increment()
 console.log(object.height)
 
 const numerator = {
-  value: 1,
-  double: function () {
-    this.value *= 2
-    return this
-  },
-  plusOne: function () {
-    ++this.value
-    return this
-  },
-  minusOne: function () {
-    --this.value
-    return this
-  },
+    value: 1,
+    double: function() {
+        this.value *= 2
+        return this
+    },
+    plusOne: function() {
+        ++this.value
+        return this
+    },
+    minusOne: function() {
+        --this.value
+        return this
+    },
 }
 
 numerator.double().plusOne().plusOne().minusOne()
 console.log(numerator.value)
 
 const stock = {
-  price: 100,
-  count: 20,
-  getPrice: function () {
-    return this.price * this.count
-  }
+    price: 100,
+    count: 20,
+    getPrice: function() {
+        return this.price * this.count
+    }
 }
 
 console.log(stock.getPrice())
 
 const details = {
-  price: 2,
-  count: 4,
+    price: 2,
+    count: 4,
 }
 
 console.log(stock.getPrice.call(details))
 
 let sizes = {
-  width: 5,
-  height: 10
-},
-  getSquare = function () {
-    return this.width * this.height
-  }
+        width: 5,
+        height: 10
+    },
+    getSquare = function() {
+        return this.width * this.height
+    }
 
 console.log(getSquare.call(sizes))
 
 let element = {
-  height: 25,
-  getHeight: function () {
-    return this.height
-  }
+    height: 25,
+    getHeight: function() {
+        return this.height
+    }
 }
 
 let getElementHeight = element.getHeight.bind(element)
@@ -659,8 +658,8 @@ console.log(getElementHeight()) // undefined
  */
 
 const sum = (...arguments) => {
-  if (!arguments.length) return 0
-  return arguments.reduce((prev, next) => prev + next)
+    if (!arguments.length) return 0
+    return arguments.reduce((prev, next) => prev + next)
 }
 
 console.log(sum(1, 2, 3, 4)) // 10
@@ -680,8 +679,8 @@ function convertToObject(num) {
  */
 
 const convertToObject = (num) => ({
-  value: num,
-  isOdd: Boolean(num % 2)
+    value: num,
+    isOdd: Boolean(num % 2)
 })
 
 /**
@@ -750,7 +749,7 @@ let products = [
 console.log("+++++++++++++");
 
 [1, 2, 3, 5, 8, 9, 10].forEach((el) =>
-  console.log({ digit: el, odd: Boolean(el % 2) })
+    console.log({ digit: el, odd: Boolean(el % 2) })
 )
 
 console.log("+++++++++++++");
@@ -760,74 +759,78 @@ console.log([12, 4, 50, 1, 0, 18, 40].some(item => !item))
 console.log("+++++++++++++");
 
 console.log(
-  ["yes", "hello", "no", "easycode", "what"].every((item) => item.length > 3)
+    ["yes", "hello", "no", "easycode", "what"].every((item) => item.length > 3)
 )
 
 console.log("+++++++++++++");
 
 const fraseArray = [
-  { char: "a", index: 12 },
-  { char: "w", index: 8 },
-  { char: "Y", index: 10 },
-  { char: "p", index: 3 },
-  { char: "p", index: 2 },
-  { char: "N", index: 6 },
-  { char: " ", index: 5 },
-  { char: "y", index: 4 },
-  { char: "r", index: 13 },
-  { char: "H", index: 0 },
-  { char: "e", index: 11 },
-  { char: "a", index: 1 },
-  { char: " ", index: 9 },
-  { char: "!", index: 14 },
-  { char: "e", index: 7 },
+    { char: "a", index: 12 },
+    { char: "w", index: 8 },
+    { char: "Y", index: 10 },
+    { char: "p", index: 3 },
+    { char: "p", index: 2 },
+    { char: "N", index: 6 },
+    { char: " ", index: 5 },
+    { char: "y", index: 4 },
+    { char: "r", index: 13 },
+    { char: "H", index: 0 },
+    { char: "e", index: 11 },
+    { char: "a", index: 1 },
+    { char: " ", index: 9 },
+    { char: "!", index: 14 },
+    { char: "e", index: 7 },
 ];
 
 let fraseStr = ""
 
 fraseArray
-  .sort((prev, next) => prev.index - next.index)
-  .forEach((item) => (fraseStr += item.char))
+    .sort((prev, next) => prev.index - next.index)
+    .forEach((item) => (fraseStr += item.char))
 
 console.log(fraseStr)
 
 console.log("+++++++++++++");
 
 console.log(
-  [[14, 45], [1], ["a", "c", "d"]].sort(
-    (prev, next) => prev.length - next.length
-  )
+    [
+        [14, 45],
+        [1],
+        ["a", "c", "d"]
+    ].sort(
+        (prev, next) => prev.length - next.length
+    )
 )
 
 console.log("+++++++++++++");
 
 console.log(
-  [
-    { cpu: "intel", info: { cores: 2, сache: 3 } },
-    { cpu: "intel", info: { cores: 4, сache: 4 } },
-    { cpu: "amd", info: { cores: 1, сache: 1 } },
-    { cpu: "intel", info: { cores: 3, сache: 2 } },
-    { cpu: "amd", info: { cores: 4, сache: 2 } },
-  ].sort((prev, next) => prev.info.cores - next.info.cores)
+    [
+        { cpu: "intel", info: { cores: 2, сache: 3 } },
+        { cpu: "intel", info: { cores: 4, сache: 4 } },
+        { cpu: "amd", info: { cores: 1, сache: 1 } },
+        { cpu: "intel", info: { cores: 3, сache: 2 } },
+        { cpu: "amd", info: { cores: 4, сache: 2 } },
+    ].sort((prev, next) => prev.info.cores - next.info.cores)
 )
 
 console.log("+++++++++++++");
 
 let products = [
-  { title: "prod1", price: 5.2 },
-  { title: "prod2", price: 0.18 },
-  { title: "prod3", price: 15 },
-  { title: "prod4", price: 25 },
-  { title: "prod5", price: 18.9 },
-  { title: "prod6", price: 8 },
-  { title: "prod7", price: 19 },
-  { title: "prod8", price: 63 },
+    { title: "prod1", price: 5.2 },
+    { title: "prod2", price: 0.18 },
+    { title: "prod3", price: 15 },
+    { title: "prod4", price: 25 },
+    { title: "prod5", price: 18.9 },
+    { title: "prod6", price: 8 },
+    { title: "prod7", price: 19 },
+    { title: "prod8", price: 63 },
 ]
 
 function filterCollection(products, min, max) {
-  return products
-    .filter(({ price }) => price >= min && price <= max)
-    .sort((prev, next) => prev.price - next.price)
+    return products
+        .filter(({ price }) => price >= min && price <= max)
+        .sort((prev, next) => prev.price - next.price)
 }
 
 console.log(filterCollection(products, 15, 30))
@@ -886,8 +889,8 @@ console.log(minus()())
 console.log("+++++++++++++");
 
 const multiplyMaker = (param1) => {
-  let res = param1
-  return (param2) => res *= param2
+    let res = param1
+    return (param2) => res *= param2
 }
 
 const mult = multiplyMaker(2)
@@ -898,19 +901,19 @@ console.log(mult(10))
 
 console.log("+++++++++++++");
 
-const module = function () {
-  let string = ''
+const module = function() {
+    let string = ''
 
-  return {
-    setStr: function (str = '') {
-      string = String(str)
-      return this
-    },
-    getStr: () => string,
-    strLen: () => string.length,
-    reverseStr: () => string.split('').reverse().join(''),
-    str
-  };
+    return {
+        setStr: function(str = '') {
+            string = String(str)
+            return this
+        },
+        getStr: () => string,
+        strLen: () => string.length,
+        reverseStr: () => string.split('').reverse().join(''),
+        str
+    };
 }()
 
 module.setStr('abcde')
@@ -920,48 +923,55 @@ console.log(module.reverseStr())
 
 console.log("+++++++++++++");
 
-const calc = function () {
-  let val = 0
-  function setVal(p = 0) {
-    val = Number(p)
-    return this
-  }
-  function getVal() {
-    return Number(val.toFixed(2))
-  }
-  function plus(p) {
-    val += Number(p)
-    return this
-  }
-  function minus(p) {
-    val -= Number(p)
-    return this
-  }
-  function divided(p) {
-    val /= Number(p)
-    return this
-  }
-  function mult(p) {
-    val *= Number(p)
-    return this
-  }
-  function exponentiation(p) {
-    val = Math.pow(val, Number(p))
-    return this
-  }
-  return {
-    setVal,
-    getVal,
-    plus,
-    minus,
-    divided,
-    mult,
-    exponentiation
-  }
+const calc = function() {
+    let val = 0
+
+    function setVal(p = 0) {
+        val = Number(p)
+        return this
+    }
+
+    function getVal() {
+        return Number(val.toFixed(2))
+    }
+
+    function plus(p) {
+        val += Number(p)
+        return this
+    }
+
+    function minus(p) {
+        val -= Number(p)
+        return this
+    }
+
+    function divided(p) {
+        val /= Number(p)
+        return this
+    }
+
+    function mult(p) {
+        val *= Number(p)
+        return this
+    }
+
+    function exponentiation(p) {
+        val = Math.pow(val, Number(p))
+        return this
+    }
+    return {
+        setVal,
+        getVal,
+        plus,
+        minus,
+        divided,
+        mult,
+        exponentiation
+    }
 }()
 
 console.log(
-  calc
+    calc
     .setVal(8)
     .exponentiation(2)
     .divided(3)
@@ -1000,12 +1010,12 @@ console.log(fu('a', 'b', 'c', 'd'))
 console.log('=============')
 
 function getInfo({ name = 'Unknown', info: { employees, partners: [first, second, ...other] } }) {
-  console.log(`Name: ${name} Partners: ${first} ${second}`)
+    console.log(`Name: ${name} Partners: ${first} ${second}`)
 }
 
 const organisation = {
-  name: 'Google',
-  info: { employees: ['Vlad', 'Olga'], partners: ['Microsoft', 'Facebook', 'Xing'] }
+    name: 'Google',
+    info: { employees: ['Vlad', 'Olga'], partners: ['Microsoft', 'Facebook', 'Xing'] }
 };
 
 getInfo(organisation)
@@ -1014,27 +1024,27 @@ getInfo(organisation)
 console.log('++++++++=====+++++++++')
 
 function User(fullName) {
-  this.fullName = fullName
+    this.fullName = fullName
 
-  Object.defineProperties(this, {
-    firstName: {
-      get: function () {
-        return this.fullName.split(' ')[0]
-      },
-      set: function (val) {
-        this.fullName = val + ' ' + this.lastName
-      }
-    },
+    Object.defineProperties(this, {
+        firstName: {
+            get: function() {
+                return this.fullName.split(' ')[0]
+            },
+            set: function(val) {
+                this.fullName = val + ' ' + this.lastName
+            }
+        },
 
-    lastName: {
-      get: function () {
-        return this.fullName.split(' ')[1]
-      },
-      set: function (newLastName) {
-        this.fullName = this.firstName + ' ' + newLastName
-      }
-    }
-  })
+        lastName: {
+            get: function() {
+                return this.fullName.split(' ')[1]
+            },
+            set: function(newLastName) {
+                this.fullName = this.firstName + ' ' + newLastName
+            }
+        }
+    })
 }
 
 const vasya = new User("Василий Попкин")
@@ -1072,8 +1082,8 @@ console.log(document.querySelector('body'))
 console.log(document.querySelector('body').children)
 console.log(document.querySelector('body').firstElementChild)
 console.log(document.querySelector('body').firstElementChild.children)
-// console.log(document.querySelector('body').firstElementChild.firstElementChild.nextElementSibling)
-// console.log(document.querySelector('body').firstElementChild.lastElementChild.previousElementSibling)
+    // console.log(document.querySelector('body').firstElementChild.firstElementChild.nextElementSibling)
+    // console.log(document.querySelector('body').firstElementChild.lastElementChild.previousElementSibling)
 const div = document.body.firstElementChild;
 const filteredArticles = [...div.children].filter(p => p !== div.firstElementChild && p !== div.lastElementChild);
 console.log(filteredArticles);
@@ -1128,12 +1138,13 @@ console.log(filteredLinks);
 const ul = document.querySelector('ul')
 console.log(ul.previousElementSibling)
 console.log(ul.nextElementSibling)
+
 function $(params) {
-  return document.querySelector(params)
+    return document.querySelector(params)
 }
 
 function $$(params) {
-  return document.createElement(params)
+    return document.createElement(params)
 }
 console.log('=======часть 1========');
 /**
@@ -1150,29 +1161,29 @@ const firstP = document.querySelector('.first')
 console.log(firstP.textContent)
 
 function node(node) {
-  if (!(node instanceof Element)) return
+    if (!(node instanceof Element)) return
 
-  return {
-    nodeType: node.nodeType,
-    nodeName: node.nodeName,
-    childNodes: node.childNodes.length
-  }
+    return {
+        nodeType: node.nodeType,
+        nodeName: node.nodeName,
+        childNodes: node.childNodes.length
+    }
 }
 
 console.log(node(firstP))
 
 function getTextFromUl(ul) {
-  if (!(ul instanceof Element)) return
+    if (!(ul instanceof Element)) return
 
-  const [...link] = ul.querySelectorAll('a') || []
-  return link.map((a) => a.textContent)
+    const [...link] = ul.querySelectorAll('a') || []
+    return link.map((a) => a.textContent)
 }
 
 const ulList = document.querySelector('ul')
 console.log(getTextFromUl(ulList))
 
 firstP.childNodes.forEach((t) => (
-  console.log((t.nodeType === 3) ? t.data = '-text-' : false)
+    console.log((t.nodeType === 3) ? t.data = '-text-' : false)
 ))
 
 console.log('=======часть 1========');
@@ -1196,9 +1207,9 @@ const listItems = document.querySelectorAll('li')
 
 for (let i = 0; i < listItems.length; i++) {
 
-  if (i % 2 === 0) {
-    listItems[i].classList.add('item')
-  }
+    if (i % 2 === 0) {
+        listItems[i].classList.add('item')
+    }
 }
 
 console.log(listItems)
@@ -1207,7 +1218,7 @@ const links = document.querySelectorAll('a')
 
 links.forEach(el => {
 
-  el.classList = 'custom-link'
+    el.classList = 'custom-link'
 });
 
 console.log(links)
@@ -1238,16 +1249,16 @@ console.log(links)
  5. Отсортировать li внутри списка в обратном порядке (по тексту внутри)
  */
 
-const createElement = function () {
-  return function () {
-    const ulPlusLi = document.getElementsByTagName('ul')[0]
-    const liCollection = ulPlusLi.children
-    let count = liCollection.length
-    const listItem = document.createElement('li')
-    listItem.classList = 'new-item'
-    listItem.textContent = `item ${++count}`
-    ulPlusLi.append(listItem)
-  }
+const createElement = function() {
+    return function() {
+        const ulPlusLi = document.getElementsByTagName('ul')[0]
+        const liCollection = ulPlusLi.children
+        let count = liCollection.length
+        const listItem = document.createElement('li')
+        listItem.classList = 'new-item'
+        listItem.textContent = `item ${++count}`
+        ulPlusLi.append(listItem)
+    }
 }()
 
 createElement()
@@ -1293,28 +1304,83 @@ const container = $('.container')
 const btn = $('button')
 const lin = $('#link')
 
-btn.addEventListener('click', function (e) {
-  const div = $$('div')
-  const nestedBtn = $$('button')
+btn.addEventListener('click', function(e) {
+    const div = $$('div')
+    const nestedBtn = $$('button')
 
-  div.textContent = 'CLICK'
-  nestedBtn.textContent = 'Button'
-  container.appendChild(div)
-  div.appendChild(nestedBtn)
+    div.textContent = 'CLICK'
+    nestedBtn.textContent = 'Button'
+    container.appendChild(div)
+    div.appendChild(nestedBtn)
 })
 
 container.addEventListener('click', e => {
-  console.dir(e.target)
-  if (e.target.tagName === 'BUTTON') {
-    console.log('button clicked')
-    console.log(e)
-  }
+    console.dir(e.target)
+    if (e.target.tagName === 'BUTTON') {
+        console.log('button clicked')
+        console.log(e)
+    }
 })
 
 const text = $('#text')
 
 btn.addEventListener('click', () => text.style.display = 'none')
-// btn.addEventListener('click', () => btn.style.display = 'none')
+    // btn.addEventListener('click', () => btn.style.display = 'none')
 
 console.log("d".charCodeAt(0));
 
+/**
+ *
+ * 1.По нажатию на кнопку "btn-msg" должен появиться алерт с тем текстом который находится в атрибуте data-text у кнопки.
+ * 2. При наведении указателя мыши на "btn-msg", кнопка становится красной; когда указатель мыши покидает кнопку, 
+ * она становится прежнего цвета. Цвет менять можно через добавление класса.
+ * 3. При нажатии на любой узел документа показать в элементе с id=tag имя тега нажатого элемента.
+ * 4. При нажатии на кнопку btn-generate добавлять в список ul элемент списка Li с текстом Item + порядковый номер Li по списку,
+ *  т.е Item 3, Item 4 и т.д
+ */
+
+const btnMsg = document.querySelector('#btn-msg')
+btnMsg.addEventListener('click', () => alert(btnMsg.dataset.text))
+
+btnMsg.addEventListener('mouseover', () => btnMsg.style.background = 'red')
+btnMsg.addEventListener('mouseout', () => btnMsg.style.background = 'white')
+
+const tag = $('#tag')
+document.addEventListener('click', (e) => tag.textContent = `Tag: ${e.target.tagName}`)
+
+const ulItem = document.querySelector('#ul')
+const btnGenerate = document.querySelector('#btn-generate')
+let count = 3
+btnGenerate.addEventListener('click', () => {
+    const li = document.createElement('li')
+    li.textContent = `Item ${count}`
+    ulItem.appendChild(li)
+        ++count
+})
+
+/**
+ * 6. Реализовать примитивный дропдаун. Изначально все dropdown-menu скрыты через класс .d-none. 
+ * При клике на dropdown-item должен отображаться блок dropdown-menu который вложен именно в тот dropdown-item
+ * на котором произошел клик. При повторном клике на этот же dropdown-item блок dropdown-menu должен закрыться.
+ * При клике на любой другой dropdown-item уже открытый dropdown-menu должен закрываться а на тот который кликнули открываться. 
+ */
+
+const dropdownItems = document.querySelectorAll(".dropdown-item")
+let currentOpenedMenu = null // В данной переменной мы будем хранить текущее открытое меню
+
+function toggleDropdownMenu(e) {
+
+    const menu = e.currentTarget.querySelector(".dropdown-menu") // получаем блок меню внутри .dropdown-item
+        // метод toggle возвращает булевое значение, если клас удален то вернет false а если добавлен то true. Это значение мы сохраняем в переменную
+    const isAdded = menu.classList.toggle("d-none")
+        // если в currentOpenedMenu уже есть блок и он не равен текущем menu то мы его скрываем
+    if (currentOpenedMenu && currentOpenedMenu !== menu) {
+        currentOpenedMenu.classList.add("d-none")
+    }
+    // Если класс d-none был удален то значет меню видимо и мы его сохраняем в переменную currentOpenedMenu
+    if (!isAdded) {
+        currentOpenedMenu = menu
+    }
+}
+
+dropdownItems.forEach((d) => d.addEventListener("click", toggleDropdownMenu))

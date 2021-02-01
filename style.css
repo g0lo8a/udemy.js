@@ -17,3 +17,11 @@ img {
 button {
   margin-left: 10px;
 }
+
+.d-none {
+  display: none;
+}
+
+.dropdown-item {
+  cursor: pointer;
+}
