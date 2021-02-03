@@ -1371,13 +1371,13 @@ let currentOpenedMenu = null // В данной переменной мы буд
 function toggleDropdownMenu(e) {
 
     const menu = e.currentTarget.querySelector(".dropdown-menu") // получаем блок меню внутри .dropdown-item
-        // метод toggle возвращает булевое значение, если клас удален то вернет false а если добавлен то true. Это значение мы сохраняем в переменную
+        // метод toggle возвращает булевое значение, если клас удален то вернет false а если добавлен то true.
     const isAdded = menu.classList.toggle("d-none")
         // если в currentOpenedMenu уже есть блок и он не равен текущем menu то мы его скрываем
     if (currentOpenedMenu && currentOpenedMenu !== menu) {
         currentOpenedMenu.classList.add("d-none")
     }
-    // Если класс d-none был удален то значет меню видимо и мы его сохраняем в переменную currentOpenedMenu
+    // Если класс d-none был удален то значит меню видимо и мы его сохраняем в переменную currentOpenedMenu
     if (!isAdded) {
         currentOpenedMenu = menu
     }
