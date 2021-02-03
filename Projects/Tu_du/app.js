@@ -48,11 +48,9 @@ const tasks = [{
         })
 
         listContainer.appendChild(fragment)
-
-        
     }
 
-    function listItemTemplate({_id, title, body} = {}) {
+    function listItemTemplate({ _id, title, body } = {}) {
 
         const li = document.createElement('li')
         li.classList.add('list-group-item', 'd-flex', 'align-items-center', 'flex-wrap', 'mt-2')
