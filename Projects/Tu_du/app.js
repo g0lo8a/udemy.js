@@ -32,8 +32,13 @@ const tasks = [{
 
     //Elements UI
     const listContainer = document.querySelector('.tasks-list-section .list-group')
+    const form = document.forms['addTask']
+    const inputTitle = form.elements['title']
+    const inputBody = form.elements['body']
 
     renderAllTasks(objOfTasks)
+    form.addEventListener('submit', onFormSubmitHandler)
+    listContainer.addEventListener('click', onDeleteHandler)
 
     function renderAllTasks(tasksList) {
         if (!tasksList) {
@@ -54,6 +59,7 @@ const tasks = [{
 
         const li = document.createElement('li')
         li.classList.add('list-group-item', 'd-flex', 'align-items-center', 'flex-wrap', 'mt-2')
+        li.setAttribute('data-task-id', _id)
 
         const span = document.createElement('span')
         span.textContent = title
@@ -72,5 +78,53 @@ const tasks = [{
         li.appendChild(deleteBtn)
 
         return li
+    }
+
+    function onFormSubmitHandler(e) {
+        e.preventDefault()
+        const titleValue = inputTitle.value
+        const bodyValue = inputBody.value
+
+        if (!titleValue || !bodyValue) {
+            alert('Пожалуйста заполните все поля формы')
+            return
+        }
+
+        const task = createNewTask(titleValue, bodyValue)
+        const listitem = listItemTemplate(task)
+        listContainer.insertAdjacentElement('afterbegin', listitem)
+        form.reset()
+    }
+
+    function createNewTask(title, body) {
+        const newTask = {
+            title,
+            body,
+            complited: false,
+            _id: `task-${Math.random()}`
+        }
+
+        objOfTasks[newTask._id] = newTask
+        return { ...newTask }
+    }
+
+    function deleteTask(id) {
+        const { title } = objOfTasks[id]
+        const isConfirm = confirm(`Удалить задачу: ${title}?`)
+        if (isConfirm) delete objOfTasks[id]
+        return isConfirm
+    }
+
+    function deleteTaskFromHtml(confirmed, el) {
+        if (confirmed) el.remove()
+    }
+
+    function onDeleteHandler({ target }) {
+        if (target.classList.contains('delete-btn')) {
+            const parent = target.closest('[data-task-id]')
+            const id = parent.dataset.taskId
+            const confirmed = deleteTask(id)
+            deleteTaskFromHtml(confirmed, parent)
+        }
     }
 })(tasks);
